@@ -6,6 +6,7 @@ using UnityEngine.UI;
 [Serializable]
 public class ARLocation
 {
+    public string name;
     public float lon;
     public float lat;
     public GameObject arModel;
