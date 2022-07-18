@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Android;
 using UnityEngine.UI;
 
 public class MapSC : MonoBehaviour
@@ -8,20 +9,31 @@ public class MapSC : MonoBehaviour
 
     public Text locationText;
     public float lon = 0, lat = 0;
-    string url;
+    bool once;
     private void Start()
     {
-        StartCoroutine(Location());
-        url = "https://www.google.com/maps/d/u/0/edit?mid=1IpW0S3A0C-L1O8KZqR3UVyOfc2Fv29A&ll=" +
-            "32.014379989221794" +
-            "%2C" +
-            "34.77346" +
-            "&" +
-            "z=18";
+        once = false;
+        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            Permission.RequestUserPermission(Permission.FineLocation);
+            Permission.RequestUserPermission(Permission.CoarseLocation);
+        }
+    }
+
+    private void Update()
+    {
+        if (!once && Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            once = true;
+            StartCoroutine(Location());
+        }
+
     }
 
     IEnumerator Location()
     {
+        
+
         // Check if the user has location service enabled.
         if (!Input.location.isEnabledByUser)
             yield break;
