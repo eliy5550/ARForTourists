@@ -46,6 +46,8 @@ public class PlaceOnPlane : MonoBehaviour
     public Text state;
     bool clickedPlace;
     bool playingAnimation;
+    GameObject spinner;
+    GameObject prompt;
 
     /// <summary>
     /// The object instantiated as a result of a successful raycast intersection with a plane.
@@ -64,6 +66,8 @@ public class PlaceOnPlane : MonoBehaviour
         cam = Camera.main;
         arPointCloud = gameObject.GetComponent<ARPointCloud>();
         arPointCloudManager = gameObject.GetComponent<ARPointCloudManager>();
+        spinner = GameObject.Find("Spinner");
+        prompt = GameObject.Find("Prompt");
         closestLocationText.text = "?";
         clickedPlace = false;
         explainButton.SetActive(false);
@@ -100,12 +104,12 @@ public class PlaceOnPlane : MonoBehaviour
         }
 
     }
+    
 
     void PlaceRedCircleOnGround() {
         Vector2 screenPos = new Vector2(Screen.width / 2, Screen.height / 2);
         if (m_RaycastManager.Raycast(screenPos, s_Hits, TrackableType.PlaneWithinPolygon))
         {
-            // Raycast hits are sorted by distance, so the first one
             // Raycast hits are sorted by distance, so the first one
             // will be the closest hit.
             var hitPose = s_Hits[0].pose;
@@ -115,6 +119,9 @@ public class PlaceOnPlane : MonoBehaviour
                 spawnedRedObject.transform.LookAt(cam.transform.position);
                 spawnedRedObject.transform.rotation = Quaternion.Euler(hitPose.rotation.x, transform.rotation.eulerAngles.y, hitPose.rotation.z);
                 state.text = "PLACE THE MARKER DIRECTLY ON THE RED CIRCLE ON THE GROUND.\nTHEN TAP 'PLACE'!";
+                if (spinner) { 
+                    Destroy(spinner);
+                }
                 //RemovePlaneIndicators();
             }
             else
@@ -212,5 +219,10 @@ public class PlaceOnPlane : MonoBehaviour
     IEnumerator RemoveExplainButtonForTime(float time) {
         yield return new WaitForSeconds(time);
         explainButton.SetActive(true);
+    }
+
+    public void Yes()
+    {
+        Destroy(prompt);
     }
 }

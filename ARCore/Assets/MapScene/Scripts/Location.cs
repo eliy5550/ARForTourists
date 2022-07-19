@@ -2,6 +2,7 @@ using System.Collections;
 using System;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Android;
 
 [Serializable]
 public class ARLocation
@@ -123,6 +124,12 @@ public class Location : MonoBehaviour
         lat = 0;
         timer = getLocationTimer;
         lookingForLocation = true;
+
+        if (!Permission.HasUserAuthorizedPermission(Permission.FineLocation))
+        {
+            Permission.RequestUserPermission(Permission.FineLocation);
+            Permission.RequestUserPermission(Permission.CoarseLocation);
+        }
 
         StartCoroutine(GPSLoc());
 
