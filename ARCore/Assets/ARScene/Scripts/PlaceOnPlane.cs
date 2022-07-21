@@ -118,7 +118,7 @@ public class PlaceOnPlane : MonoBehaviour
                 spawnedRedObject = Instantiate(redCircle, hitPose.position, hitPose.rotation);
                 spawnedRedObject.transform.LookAt(cam.transform.position);
                 spawnedRedObject.transform.rotation = Quaternion.Euler(hitPose.rotation.x, transform.rotation.eulerAngles.y, hitPose.rotation.z);
-                state.text = "PLACE THE MARKER DIRECTLY ON THE RED CIRCLE ON THE GROUND.\nTHEN TAP 'PLACE'!";
+                state.text = "PLACE THE X DIRECTLY ON THE RED CIRCLE ON THE GROUND.\nTHEN TAP 'PLACE'!";
                 if (spinner) { 
                     Destroy(spinner);
                 }

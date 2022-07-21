@@ -325,11 +325,11 @@ IL2CPP_EXTERN_C String_t* _stringLiteral04F619E53FF25AE1ECAED76D71FA7B76A5E41476
 IL2CPP_EXTERN_C String_t* _stringLiteral2386E77CF610F786B06A91AF2C1B3FD2282D2745;
 IL2CPP_EXTERN_C String_t* _stringLiteral2A4AF2371E5D32D286057BF0185547BF96F20333;
 IL2CPP_EXTERN_C String_t* _stringLiteral2FD7F24E92EA095727378E3E8B475DF18D502CE4;
-IL2CPP_EXTERN_C String_t* _stringLiteral38F7F6DC696513A1435F65764394F6B5C37AB7BF;
 IL2CPP_EXTERN_C String_t* _stringLiteral3D4887776042D73AD182766CDE2B5AE68B794B7D;
 IL2CPP_EXTERN_C String_t* _stringLiteral3D91A5F9B5EFBD3B7B4605DA132D67D6CE783D63;
 IL2CPP_EXTERN_C String_t* _stringLiteral555C07B6FA78F958F86C7E2DD5DA479F8D287FE5;
 IL2CPP_EXTERN_C String_t* _stringLiteral631CB151C08E6727A6009F81F2ED6808146362CC;
+IL2CPP_EXTERN_C String_t* _stringLiteral689399F194BB2C34A0B22988A80D007D815CFDB9;
 IL2CPP_EXTERN_C String_t* _stringLiteral738F291E53E97C08DAE378C71EF70A60E31AE900;
 IL2CPP_EXTERN_C String_t* _stringLiteral876C4B39B6E4D0187090400768899C71D99DE90D;
 IL2CPP_EXTERN_C String_t* _stringLiteral95C2FD44161D8CBC1E72E119B31535FBC9C137AE;
@@ -1852,8 +1852,8 @@ struct ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1  : public Mon
 	ARLocationU5BU5D_tE258D686F61057E02C608983E1365E8F47629CDA* ___aRLocations_4;
 	// System.Int32 ARLocationsLoader::size
 	int32_t ___size_5;
-	// System.Boolean ARLocationsLoader::done
-	bool ___done_6;
+	// System.Boolean ARLocationsLoader::unzipped
+	bool ___unzipped_6;
 };
 
 // UnityEngine.XR.ARFoundation.ARSessionOrigin
@@ -2645,6 +2645,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Enumerator_MoveNext_mBE11DA1DAFC756EB87E
 // System.Void System.Collections.Generic.Dictionary`2<System.Object,System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Dictionary_2__ctor_m5B32FBC624618211EB461D59CFBB10E987FD1329_gshared (Dictionary_2_t14FE4A752A83D53771C584E4C8D14E01F2AFD7BA* __this, const RuntimeMethod* method) ;
 
+// System.Void ARLocationsLoader::LoadFromResources()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARLocationsLoader_LoadFromResources_m47F932483213E01A787B8233BA871AFE1452710C (ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1* __this, const RuntimeMethod* method) ;
 // T[] UnityEngine.Resources::LoadAll<UnityEngine.GameObject>(System.String)
 inline GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* Resources_LoadAll_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_mDEBC5FE6087B0AD2CFB4F716C0D40151C979C4DC (String_t* ___path0, const RuntimeMethod* method)
 {
@@ -3108,6 +3110,16 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Quaternion_tDA59F214EF07D7700B26E40E562F267AF
 // System.Void ARLocationsLoader::Start()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARLocationsLoader_Start_m38D2B3FC8BA14E29BD99182A3F8021FE118BE537 (ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1* __this, const RuntimeMethod* method) 
 {
+	{
+		// LoadFromResources();
+		ARLocationsLoader_LoadFromResources_m47F932483213E01A787B8233BA871AFE1452710C(__this, NULL);
+		// }
+		return;
+	}
+}
+// System.Void ARLocationsLoader::LoadFromResources()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARLocationsLoader_LoadFromResources_m47F932483213E01A787B8233BA871AFE1452710C (ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1* __this, const RuntimeMethod* method) 
+{
 	static bool s_Il2CppMethodInitialized;
 	if (!s_Il2CppMethodInitialized)
 	{
@@ -3164,7 +3176,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ARLocationsLoader_Start_m38D2B3FC8BA14E2
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_4;
 		L_4 = String_Split_m9530B73D02054692283BF35C3A27C8F2230946F4(L_3, ((int32_t)10), 0, NULL);
 		V_2 = L_4;
-		// size = rows.Length-2;
+		// size = rows.Length - 2;
 		StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* L_5 = V_2;
 		NullCheck(L_5);
 		__this->___size_5 = ((int32_t)il2cpp_codegen_subtract(((int32_t)(((RuntimeArray*)L_5)->max_length)), 2));
@@ -3387,7 +3399,7 @@ IL_0141:
 		}
 	}
 	{
-		// foreach (GameObject go in allPrefabs) {
+		// foreach (GameObject go in allPrefabs)
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_57 = V_0;
 		V_12 = L_57;
 		V_13 = 0;
@@ -3396,14 +3408,14 @@ IL_0141:
 
 IL_0154:
 	{
-		// foreach (GameObject go in allPrefabs) {
+		// foreach (GameObject go in allPrefabs)
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_58 = V_12;
 		int32_t L_59 = V_13;
 		NullCheck(L_58);
 		int32_t L_60 = L_59;
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_61 = (L_58)->GetAt(static_cast<il2cpp_array_size_t>(L_60));
 		V_14 = L_61;
-		// if (go.name == model) {
+		// if (go.name == model)
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_62 = V_14;
 		NullCheck(L_62);
 		String_t* L_63;
@@ -3439,7 +3451,7 @@ IL_017d:
 
 IL_0183:
 	{
-		// foreach (GameObject go in allPrefabs) {
+		// foreach (GameObject go in allPrefabs)
 		int32_t L_72 = V_13;
 		GameObjectU5BU5D_tFF67550DFCE87096D7A3734EA15B75896B2722CF* L_73 = V_12;
 		NullCheck(L_73);
@@ -3451,14 +3463,14 @@ IL_0183:
 
 IL_018b:
 	{
-		// for (int i = 0; i < allAudio.Length; i++) {
+		// for (int i = 0; i < allAudio.Length; i++)
 		V_15 = 0;
 		goto IL_01c6;
 	}
 
 IL_0190:
 	{
-		// if (allAudio[i].name.Trim() == sound.Trim()) {
+		// if (allAudio[i].name.Trim() == sound.Trim())
 		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_74 = V_1;
 		int32_t L_75 = V_15;
 		NullCheck(L_74);
@@ -3502,14 +3514,14 @@ IL_0190:
 
 IL_01c0:
 	{
-		// for (int i = 0; i < allAudio.Length; i++) {
+		// for (int i = 0; i < allAudio.Length; i++)
 		int32_t L_91 = V_15;
 		V_15 = ((int32_t)il2cpp_codegen_add(L_91, 1));
 	}
 
 IL_01c6:
 	{
-		// for (int i = 0; i < allAudio.Length; i++) {
+		// for (int i = 0; i < allAudio.Length; i++)
 		int32_t L_92 = V_15;
 		AudioClipU5BU5D_t916722468F7EDCFA833318C35CD7D41097D75D31* L_93 = V_1;
 		NullCheck(L_93);
@@ -4091,7 +4103,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlaceOnPlane_PlaceRedCircleOnGround_m70D
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_Instantiate_TisGameObject_t76FEDD663AB33C991A9C9A23129337651094216F_m2537AA64AEAC12995F52F5B412866556B83CFBE0_RuntimeMethod_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Object_tC12DECB6760A7F2CBF65D9DCF18D044C2D97152C_il2cpp_TypeInfo_var);
 		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&PlaceOnPlane_t717C58662DC565F29819D900A31C0F3649A406E3_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral38F7F6DC696513A1435F65764394F6B5C37AB7BF);
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral689399F194BB2C34A0B22988A80D007D815CFDB9);
 		s_Il2CppMethodInitialized = true;
 	}
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
@@ -4195,10 +4207,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void PlaceOnPlane_PlaceRedCircleOnGround_m70D
 		L_34 = Quaternion_Euler_mD4601D966F1F58F3FCA01B3FC19A12D0AD0396DD_inline(L_26, L_30, L_33, NULL);
 		NullCheck(L_23);
 		Transform_set_rotation_m61340DE74726CF0F9946743A727C4D444397331D(L_23, L_34, NULL);
-		// state.text = "PLACE THE MARKER DIRECTLY ON THE RED CIRCLE ON THE GROUND.\nTHEN TAP 'PLACE'!";
+		// state.text = "PLACE THE X DIRECTLY ON THE RED CIRCLE ON THE GROUND.\nTHEN TAP 'PLACE'!";
 		Text_tD60B2346DAA6666BF0D822FF607F0B220C2B9E62* L_35 = __this->___state_18;
 		NullCheck(L_35);
-		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_35, _stringLiteral38F7F6DC696513A1435F65764394F6B5C37AB7BF);
+		VirtualActionInvoker1< String_t* >::Invoke(75 /* System.Void UnityEngine.UI.Text::set_text(System.String) */, L_35, _stringLiteral689399F194BB2C34A0B22988A80D007D815CFDB9);
 		// if (spinner) {
 		GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* L_36 = __this->___spinner_21;
 		bool L_37;

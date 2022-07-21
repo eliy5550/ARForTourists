@@ -5,13 +5,20 @@ using System.IO;
 using System.IO.Compression;
 using System;
 
+
 public class ARLocationsLoader : MonoBehaviour
 {
 
     public ARLocation[] aRLocations;
     public int size;
-    bool done;
+    bool unzipped;
     void Start()
+    {
+        
+
+        LoadFromResources();
+    }
+    private void LoadFromResources()
     {
         //LOAD ALL PREFABS
         GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
@@ -23,7 +30,7 @@ public class ARLocationsLoader : MonoBehaviour
         string dftext = df.text;
         string[] rows = dftext.Split('\n');
 
-        size = rows.Length-2;
+        size = rows.Length - 2;
         aRLocations = new ARLocation[size];
 
         for (int i = 0; i < size; i++)
@@ -40,7 +47,8 @@ public class ARLocationsLoader : MonoBehaviour
             for (int j = 0; j < cells.Length; j++)
             {
                 string cellInfo = cells[j];
-                switch (j) {
+                switch (j)
+                {
                     case 0:
                         aRLocations[rowNum].name = cellInfo;
                         break;
@@ -63,15 +71,19 @@ public class ARLocationsLoader : MonoBehaviour
                 }
             }
             //SET GAMEOBJECT
-            foreach (GameObject go in allPrefabs) {
-                if (go.name == model) {
+            foreach (GameObject go in allPrefabs)
+            {
+                if (go.name == model)
+                {
                     aRLocations[rowNum].arModel = go;
                     break;
                 }
             }
             //SET SOUND
-            for (int i = 0; i < allAudio.Length; i++) {
-                if (allAudio[i].name.Trim() == sound.Trim()) {
+            for (int i = 0; i < allAudio.Length; i++)
+            {
+                if (allAudio[i].name.Trim() == sound.Trim())
+                {
                     aRLocations[rowNum].clip = allAudio[i];
                     break;
                 }
@@ -81,7 +93,7 @@ public class ARLocationsLoader : MonoBehaviour
         Location location = FindObjectOfType<Location>();
         location.arLocations = aRLocations;
     }
-    
+
     void Update()
     {
 

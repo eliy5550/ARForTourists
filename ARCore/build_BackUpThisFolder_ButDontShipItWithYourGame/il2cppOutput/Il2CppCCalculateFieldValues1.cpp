@@ -27387,8 +27387,8 @@ struct ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1  : public Mon
 	ARLocationU5BU5D_tE258D686F61057E02C608983E1365E8F47629CDA* ___aRLocations_4;
 	// System.Int32 ARLocationsLoader::size
 	int32_t ___size_5;
-	// System.Boolean ARLocationsLoader::done
-	bool ___done_6;
+	// System.Boolean ARLocationsLoader::unzipped
+	bool ___unzipped_6;
 };
 
 // UnityEngine.XR.ARFoundation.ARMeshManager
@@ -35119,7 +35119,7 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4984[2] =
 	static_cast<int32_t>(offsetof(AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A, ___m_Handle_0)) + static_cast<int32_t>(sizeof(RuntimeObject)),static_cast<int32_t>(offsetof(AnimatorControllerPlayable_tADDCB301674D6243EFE1BD032E7D118FD091210A_StaticFields, ___m_NullPlayable_1)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4986[3] = 
 {
-	static_cast<int32_t>(offsetof(ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1, ___aRLocations_4)),static_cast<int32_t>(offsetof(ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1, ___size_5)),static_cast<int32_t>(offsetof(ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1, ___done_6)),};
+	static_cast<int32_t>(offsetof(ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1, ___aRLocations_4)),static_cast<int32_t>(offsetof(ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1, ___size_5)),static_cast<int32_t>(offsetof(ARLocationsLoader_t3B418C115BA8F90821ED45CDDCD62F3C5C9EC3D1, ___unzipped_6)),};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable4987[5] = 
 {
 	static_cast<int32_t>(offsetof(ARTapToPlaceObject_t608C4C63EACC69846C00DF262C964E81D6DB6994, ___placementIndicator_4)),static_cast<int32_t>(offsetof(ARTapToPlaceObject_t608C4C63EACC69846C00DF262C964E81D6DB6994, ___arOrigin_5)),static_cast<int32_t>(offsetof(ARTapToPlaceObject_t608C4C63EACC69846C00DF262C964E81D6DB6994, ___placementPose_6)),static_cast<int32_t>(offsetof(ARTapToPlaceObject_t608C4C63EACC69846C00DF262C964E81D6DB6994, ___aRRaycastManager_7)),static_cast<int32_t>(offsetof(ARTapToPlaceObject_t608C4C63EACC69846C00DF262C964E81D6DB6994, ___placementPoseIsValid_8)),};
