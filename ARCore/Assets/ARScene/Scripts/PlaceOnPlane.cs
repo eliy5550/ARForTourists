@@ -28,6 +28,8 @@ public class PlaceOnPlane : MonoBehaviour
     public GameObject resetButton , lockButton , explainButton;
 
     Camera cam;
+    Renderer renderer;
+    WebCamTexture _webCamTexture;
     ARPointCloud arPointCloud;
     ARPointCloudManager arPointCloudManager;
 
@@ -57,7 +59,7 @@ public class PlaceOnPlane : MonoBehaviour
     public AudioClip clipForThisLocation;
     public string animationName = "arm_npc_1|A";
     Animator animator;
-    Location locationSC;
+
 
     private void Start()
     {
@@ -70,7 +72,6 @@ public class PlaceOnPlane : MonoBehaviour
         clickedPlace = false;
         explainButton.SetActive(false);
         playingAnimation = false;
-        locationSC = FindObjectOfType<Location>();
     }
 
     void Awake()
@@ -83,11 +84,22 @@ public class PlaceOnPlane : MonoBehaviour
         //placementUpdate.AddListener(DiableVisual);
     }
 
+    bool TryGetTouchPosition(out Vector2 touchPosition)
+    {
+        if (Input.touchCount > 0)
+        {
+            touchPosition = Input.GetTouch(0).position;
+            return true;
+        }
+
+        touchPosition = default;
+        return false;
+    }
+
     void Update()
     {
         FindMarkerPoint();
-        if (!clickedPlace) {
-            //UpdateUI();
+        if (!clickedPlace) { 
             PlaceRedCircleOnGround();
         }
 
@@ -162,8 +174,6 @@ public class PlaceOnPlane : MonoBehaviour
             var hitPose = s_Hits[0].pose;
             if (spawnedObject == null)
             {
-                m_PlacedPrefab = locationSC.closestARModel;
-                //m_PlacedPrefab = FindObjectOfType<ARLocationsLoader>().aRLocations[0].arModel;
                 clickedPlace = true;
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
                 //spawnedObject.transform.LookAt(cam.transform.position);
@@ -215,6 +225,4 @@ public class PlaceOnPlane : MonoBehaviour
     {
         Destroy(prompt);
     }
-
-
 }

@@ -11,18 +11,12 @@ public class CreateAssetBundles
     [MenuItem("Assets/Build AssetBundles")]
     static void BuildAllAssetBundles()
     {
-        //BuildPipeline.BuildAssetBundles("Assets/AssetBundles", BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);
-        BuildPipeline.BuildAssetBundles("Assets/AssetBundles",
-            BuildAssetBundleOptions.CollectDependencies,
-            BuildTarget.Android);
-
+        BuildPipeline.BuildAssetBundles("Assets/AssetBundles", BuildAssetBundleOptions.None, BuildTarget.StandaloneWindows64);
     }
-
 }
 
 public class AssertBundlesSC : MonoBehaviour
 {
-            
 
     void Start()
     {

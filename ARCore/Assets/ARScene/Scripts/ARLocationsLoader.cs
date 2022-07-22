@@ -4,9 +4,7 @@ using UnityEngine;
 using System.IO;
 using System.IO.Compression;
 using System;
-using UnityEngine.SceneManagement;
-using UnityEngine.UI;
-using UnityEngine.Networking;
+
 
 public class ARLocationsLoader : MonoBehaviour
 {
@@ -14,44 +12,21 @@ public class ARLocationsLoader : MonoBehaviour
     public ARLocation[] aRLocations;
     public int size;
     bool unzipped;
-    string asset_bundle_path;
-    AssetBundle ab1;
-    //public Text txt1;
     void Start()
     {
-        //StartCoroutine(GetAssetBundle());
-        LoadFromAssetBundle();
+        
+
+        LoadFromResources();
     }
-
-    IEnumerator GetAssetBundle()
-    {
-        string url = "https://github.com/eliy5550/eliy5550.github.io/raw/main/Bundle/ab2";
-
-        using (UnityWebRequest uwr = UnityWebRequestAssetBundle.GetAssetBundle(url))
-        {
-            yield return uwr.SendWebRequest();
-            //StopWaiting();
-            ab1 = DownloadHandlerAssetBundle.GetContent(uwr);
-            //print(ab1.LoadAllAssets<GameObject>()[1].name);
-            //FindObjectOfType<Location>().closestARModel = ab1.LoadAllAssets<GameObject>()[0];
-            LoadFromAssetBundle();
-        }
-    }
-
-    private void LoadFromAssetBundle()
+    private void LoadFromResources()
     {
         //LOAD ALL PREFABS
-        //GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
+        GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
         //LOAD ALL AUDIO
-        //AudioClip[] allAudio = Resources.LoadAll<AudioClip>("zip/audio");
+        AudioClip[] allAudio = Resources.LoadAll<AudioClip>("zip/audio");
+
         //LOADING STRINGS
-        //TextAsset df = Resources.Load<TextAsset>("zip/info");
-
-        ab1 = AssetBundle.LoadFromFile(Application.persistentDataPath + "/ab2");
-
-        TextAsset df = ab1.LoadAsset("info.csv") as TextAsset;
-
-
+        TextAsset df = Resources.Load<TextAsset>("zip/info");
         string dftext = df.text;
         string[] rows = dftext.Split('\n');
 
@@ -95,46 +70,32 @@ public class ARLocationsLoader : MonoBehaviour
                         break;
                 }
             }
-
-
-
             //SET GAMEOBJECT
-            aRLocations[rowNum].arModel = ab1.LoadAsset(model+".prefab") as GameObject;
-
-            //foreach (GameObject go in allPrefabs)
-            //{
-            //    if (go.name == model)
-            //    {
-            //        aRLocations[rowNum].arModel = go;
-            //        break;
-            //    }
-            //}
-
-
-            //SET SOUND
-            AudioClip[] audioClips = ab1.LoadAllAssets<AudioClip>();
-
-            for (int i = 0; i < audioClips.Length; i++)
+            foreach (GameObject go in allPrefabs)
             {
-                if (audioClips[i].name.Trim() == sound.Trim())
+                if (go.name == model)
                 {
-                    aRLocations[rowNum].clip = audioClips[i];
+                    aRLocations[rowNum].arModel = go;
+                    break;
+                }
+            }
+            //SET SOUND
+            for (int i = 0; i < allAudio.Length; i++)
+            {
+                if (allAudio[i].name.Trim() == sound.Trim())
+                {
+                    aRLocations[rowNum].clip = allAudio[i];
                     break;
                 }
             }
         }
-        //Instantiate(ab1.LoadAsset<GameObject>("A") , new Vector3(0.5f , 0 , 4) , Quaternion.identity);
+
         Location location = FindObjectOfType<Location>();
         location.arLocations = aRLocations;
     }
 
-    void StopWaiting() {
-        Destroy(GameObject.Find("Wait"));
-    }
-
-    private void Update()
+    void Update()
     {
-        //FindObjectOfType<Location>().arLocations = aRLocations;
-    }
 
+    }
 }
