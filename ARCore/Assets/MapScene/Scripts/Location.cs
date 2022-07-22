@@ -15,6 +15,8 @@ public class ARLocation
     public static string distances = "";
     public AudioClip clip;
     public string animationName;
+
+
     public ARLocation(float lo, float la, GameObject m)
     {
         lon = lo;

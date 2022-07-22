@@ -40,16 +40,18 @@ public class ARLocationsLoader : MonoBehaviour
 
     private void LoadFromAssetBundle()
     {
-
-        AssetBundle ab = AssetBundle.LoadFromFile(Application.persistentDataPath + "/ab");
-
         //LOAD ALL PREFABS
 <<<<<<< HEAD
+<<<<<<< HEAD
         GameObject[] allPrefabs = ab.LoadAllAssets<GameObject>();
+=======
+        GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
+>>>>>>> parent of 9f9ca6f (not working)
         //LOAD ALL AUDIO
-        AudioClip[] allAudio = ab.LoadAllAssets<AudioClip>();
+        AudioClip[] allAudio = Resources.LoadAll<AudioClip>("zip/audio");
 
         //LOADING STRINGS
+<<<<<<< HEAD
         TextAsset df = ab.LoadAsset<TextAsset>("info.csv");
 =======
         //GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
@@ -64,6 +66,9 @@ public class ARLocationsLoader : MonoBehaviour
 
 
 >>>>>>> parent of 594b093 (Works - NO DOWNLOADS!)
+=======
+        TextAsset df = Resources.Load<TextAsset>("zip/info");
+>>>>>>> parent of 9f9ca6f (not working)
         string dftext = df.text;
         string[] rows = dftext.Split('\n');
 

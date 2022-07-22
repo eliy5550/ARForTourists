@@ -128,10 +128,14 @@ const Il2CppCodeRegistration g_CodeRegistration =
 	18,
 	g_ReversePInvokeWrapperPointers,
 <<<<<<< HEAD
+<<<<<<< HEAD
 	42971,
 =======
 	42972,
 >>>>>>> parent of 594b093 (Works - NO DOWNLOADS!)
+=======
+	42970,
+>>>>>>> parent of 9f9ca6f (not working)
 	g_Il2CppGenericMethodPointers,
 	g_Il2CppGenericAdjustorThunks,
 	12516,

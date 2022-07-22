@@ -84,6 +84,20 @@ public class PlaceOnPlane : MonoBehaviour
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+    bool TryGetTouchPosition(out Vector2 touchPosition)
+    {
+        if (Input.touchCount > 0)
+        {
+            touchPosition = Input.GetTouch(0).position;
+            return true;
+        }
+
+        touchPosition = default;
+        return false;
+    }
+>>>>>>> parent of 9f9ca6f (not working)
 
 =======
 >>>>>>> parent of 594b093 (Works - NO DOWNLOADS!)
@@ -155,9 +169,6 @@ public class PlaceOnPlane : MonoBehaviour
     }
 
     public void PlaceARObjectInTheMiddle() {
-        m_PlacedPrefab = AssetBundle.LoadFromFile(Application.persistentDataPath + "/ab").LoadAsset<GameObject>("A");
-        GameObject.Find("Placing").GetComponent<Text>().text = m_PlacedPrefab.name;
-        spawnedObject = Instantiate(m_PlacedPrefab, Vector3.zero , Quaternion.identity);
 
         Vector2 screenPos = new Vector2(Screen.width / 2, Screen.height / 2);
 
@@ -172,8 +183,6 @@ public class PlaceOnPlane : MonoBehaviour
                 m_PlacedPrefab = locationSC.closestARModel;
                 //m_PlacedPrefab = FindObjectOfType<ARLocationsLoader>().aRLocations[0].arModel;
                 clickedPlace = true;
-                m_PlacedPrefab = AssetBundle.LoadFromFile(Application.persistentDataPath + "/ab").LoadAsset<GameObject>("A");
-                GameObject.Find("Placing").GetComponent<Text>().text = m_PlacedPrefab.name;
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
                 //spawnedObject.transform.LookAt(cam.transform.position);
                 //spawnedObject.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);

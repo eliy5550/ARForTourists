@@ -739,7 +739,6 @@ IL2CPP_EXTERN_C RuntimeClass* NotSupportedException_t1429765983D409BD2986508963C
 IL2CPP_EXTERN_C RuntimeClass* ObjectDisposedException_tC5FB29E8E980E2010A2F6A5B9B791089419F89EB_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ObjectU5BU5D_t8061030B0A12A55D5AD8652A20C922FE99450918_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* OutOfMemoryException_tE6DC2F937EC4A8699271D5151C4DF83BDE99EE7F_il2cpp_TypeInfo_var;
-IL2CPP_EXTERN_C RuntimeClass* Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PipelineEntryU5BU5D_tF96DE809CEDE1A15F1D069F027582F92EEE04CE4_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* PipelineEntry_t3169094ED57F0D943BF1EC06C99B977532DA7463_il2cpp_TypeInfo_var;
 IL2CPP_EXTERN_C RuntimeClass* ReceiveState_tE1D65794D7562B5A4D465B01113B4EB7446EF06E_il2cpp_TypeInfo_var;
@@ -5227,10 +5226,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClient_CopyHeadersTo_m9CD15AFAE588635
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RuntimeObject* WebClient_get_Credentials_m99EE856624B8FE9061B957D2546FE6575DD2A176_inline (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, const RuntimeMethod* method) ;
 // System.Net.Cache.RequestCachePolicy System.Net.WebClient::get_CachePolicy()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR RequestCachePolicy_tF15C94C5E458478914D5EB17753294BD488B0550* WebClient_get_CachePolicy_m30379795616542016E77D6A3F4FC37780A94DF65_inline (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, const RuntimeMethod* method) ;
-// System.Uri System.Net.WebClient::GetUri(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* WebClient_GetUri_m723EBE602F0D7DC7767E901A303809CB0E17419F (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, String_t* ___address0, const RuntimeMethod* method) ;
-// System.Void System.Net.WebClient::DownloadFile(System.Uri,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClient_DownloadFile_m70580A17B13BAAC7D726A48F48B4085B0377D5D6 (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___address0, String_t* ___fileName1, const RuntimeMethod* method) ;
 // System.Void System.Net.WebClient::ThrowIfNull(System.Object,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClient_ThrowIfNull_mD08AB53F27D94697F23B76FDAF899B2EC46EEE63 (RuntimeObject* ___argument0, String_t* ___parameterName1, const RuntimeMethod* method) ;
 // System.Void System.Net.WebClient::StartOperation()
@@ -5259,16 +5254,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpWebRequest_set_Referer_m6A8F5950AFF4
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpWebRequest_set_UserAgent_mF44CBC379376E5598E1C73FD7F1E3B949383F834 (HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* __this, String_t* ___value0, const RuntimeMethod* method) ;
 // System.Void System.Net.HttpWebRequest::set_Host(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void HttpWebRequest_set_Host_mFA9FC9A81055D06433A6A27EA236B70342D748D5 (HttpWebRequest_tDE1EF6EAE715BE99DB1645ED937A6A2AB930E7C9* __this, String_t* ___value0, const RuntimeMethod* method) ;
-// System.Boolean System.Uri::op_Inequality(System.Uri,System.Uri)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Uri_op_Inequality_mC32A3382EF16D80BF39005BDD2AB452203D76D6E (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___uri10, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___uri21, const RuntimeMethod* method) ;
-// System.String System.IO.Path::GetFullPath(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Path_GetFullPath_m17A1AD4E216D884E3DF3208BF44F4E40823BAA23 (String_t* ___path0, const RuntimeMethod* method) ;
-// System.Void System.Uri::.ctor(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Uri__ctor_m6CA436E6AD2768A121FA851CBEEFA3623E849D3A (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* __this, String_t* ___uriString0, const RuntimeMethod* method) ;
-// System.Boolean System.Uri::TryCreate(System.String,System.UriKind,System.Uri&)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Uri_TryCreate_mBDD7F98C3BEBD9C3936DDF7960533CBB56478FDF (String_t* ___uriString0, int32_t ___uriKind1, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E** ___result2, const RuntimeMethod* method) ;
 // System.Boolean System.Uri::get_IsAbsoluteUri()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Uri_get_IsAbsoluteUri_m2F9B759B85D295639D7959A616E1FBC203D756DF (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* __this, const RuntimeMethod* method) ;
+// System.Boolean System.Uri::op_Inequality(System.Uri,System.Uri)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Uri_op_Inequality_mC32A3382EF16D80BF39005BDD2AB452203D76D6E (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___uri10, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___uri21, const RuntimeMethod* method) ;
 // System.Boolean System.Uri::TryCreate(System.Uri,System.Uri,System.Uri&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool Uri_TryCreate_mCA31A2D77EDBBD6A927FC819270229B164A85E93 (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___baseUri0, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___relativeUri1, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E** ___result2, const RuntimeMethod* method) ;
 // System.String System.Uri::get_Query()
@@ -5485,6 +5474,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR ArrayList_t7A8E5AF0C4378015B5731ABE2BED8F2782
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t String_Compare_mC0521D93E3608D6A004D12B1921058A021987CAA (String_t* ___strA0, int32_t ___indexA1, String_t* ___strB2, int32_t ___indexB3, int32_t ___length4, int32_t ___comparisonType5, const RuntimeMethod* method) ;
 // System.Net.IWebRequestCreate System.Net.WebRequestPrefixElement::get_Creator()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* WebRequestPrefixElement_get_Creator_mA4054182FA19EA0B452693C7F747122DC0A4A9ED (WebRequestPrefixElement_tBE0FDE8DE0352095DECA0964655D25E05E435C35* __this, const RuntimeMethod* method) ;
+// System.Void System.Uri::.ctor(System.String)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Uri__ctor_m6CA436E6AD2768A121FA851CBEEFA3623E849D3A (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* __this, String_t* ___uriString0, const RuntimeMethod* method) ;
 // System.Net.WebRequest System.Net.WebRequest::Create(System.Uri,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR WebRequest_t89050438AE9A5AA9221ECAE223584127F7C1294B* WebRequest_Create_m9DD92CB71F55DA62C44CDCB1797D1B4241E753DC (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___requestUri0, bool ___useUriBase1, const RuntimeMethod* method) ;
 // System.Boolean System.Uri::op_Equality(System.Uri,System.Uri)
@@ -20692,18 +20683,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR WebResponse_t7CDE1F20895C8D5AD392425F9AD4BE8E
 		return L_3;
 	}
 }
-// System.Void System.Net.WebClient::DownloadFile(System.String,System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClient_DownloadFile_m6F5CC5F239EF0D43A16BCF37EA74F8E2C7C6CA54 (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, String_t* ___address0, String_t* ___fileName1, const RuntimeMethod* method) 
-{
-	{
-		String_t* L_0 = ___address0;
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1;
-		L_1 = WebClient_GetUri_m723EBE602F0D7DC7767E901A303809CB0E17419F(__this, L_0, NULL);
-		String_t* L_2 = ___fileName1;
-		WebClient_DownloadFile_m70580A17B13BAAC7D726A48F48B4085B0377D5D6(__this, L_1, L_2, NULL);
-		return;
-	}
-}
 // System.Void System.Net.WebClient::DownloadFile(System.Uri,System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void WebClient_DownloadFile_m70580A17B13BAAC7D726A48F48B4085B0377D5D6 (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* ___address0, String_t* ___fileName1, const RuntimeMethod* method) 
 {
@@ -21207,84 +21186,6 @@ IL_016b:
 IL_017c:
 	{
 		return;
-	}
-}
-// System.Uri System.Net.WebClient::GetUri(System.String)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* WebClient_GetUri_m723EBE602F0D7DC7767E901A303809CB0E17419F (WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268* __this, String_t* ___address0, const RuntimeMethod* method) 
-{
-	static bool s_Il2CppMethodInitialized;
-	if (!s_Il2CppMethodInitialized)
-	{
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268_il2cpp_TypeInfo_var);
-		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&_stringLiteral8A577A5A6848BEDC7A1DBA1211A06E627EEF0057);
-		s_Il2CppMethodInitialized = true;
-	}
-	Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* V_0 = NULL;
-	{
-		String_t* L_0 = ___address0;
-		il2cpp_codegen_runtime_class_init_inline(WebClient_tDAF482E6631A91D5FDF2138E6932A323B913F268_il2cpp_TypeInfo_var);
-		WebClient_ThrowIfNull_mD08AB53F27D94697F23B76FDAF899B2EC46EEE63(L_0, _stringLiteral8A577A5A6848BEDC7A1DBA1211A06E627EEF0057, NULL);
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_1 = __this->____baseAddress_4;
-		il2cpp_codegen_runtime_class_init_inline(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		bool L_2;
-		L_2 = Uri_op_Inequality_mC32A3382EF16D80BF39005BDD2AB452203D76D6E(L_1, (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E*)NULL, NULL);
-		if (!L_2)
-		{
-			goto IL_0035;
-		}
-	}
-	{
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_3 = __this->____baseAddress_4;
-		String_t* L_4 = ___address0;
-		il2cpp_codegen_runtime_class_init_inline(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		bool L_5;
-		L_5 = Uri_TryCreate_m0653E526B4101798C6BD5D0D7D22B30EDD4EA4E8(L_3, L_4, (&V_0), NULL);
-		if (L_5)
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		String_t* L_6 = ___address0;
-		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		String_t* L_7;
-		L_7 = Path_GetFullPath_m17A1AD4E216D884E3DF3208BF44F4E40823BAA23(L_6, NULL);
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_8 = (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E*)il2cpp_codegen_object_new(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		NullCheck(L_8);
-		Uri__ctor_m6CA436E6AD2768A121FA851CBEEFA3623E849D3A(L_8, L_7, NULL);
-		return L_8;
-	}
-
-IL_0035:
-	{
-		String_t* L_9 = ___address0;
-		il2cpp_codegen_runtime_class_init_inline(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		bool L_10;
-		L_10 = Uri_TryCreate_mBDD7F98C3BEBD9C3936DDF7960533CBB56478FDF(L_9, 1, (&V_0), NULL);
-		if (L_10)
-		{
-			goto IL_004c;
-		}
-	}
-	{
-		String_t* L_11 = ___address0;
-		il2cpp_codegen_runtime_class_init_inline(Path_t8A38A801D0219E8209C1B1D90D82D4D755D998BC_il2cpp_TypeInfo_var);
-		String_t* L_12;
-		L_12 = Path_GetFullPath_m17A1AD4E216D884E3DF3208BF44F4E40823BAA23(L_11, NULL);
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_13 = (Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E*)il2cpp_codegen_object_new(Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E_il2cpp_TypeInfo_var);
-		NullCheck(L_13);
-		Uri__ctor_m6CA436E6AD2768A121FA851CBEEFA3623E849D3A(L_13, L_12, NULL);
-		return L_13;
-	}
-
-IL_004c:
-	{
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_14 = V_0;
-		Uri_t1500A52B5F71A04F5D05C0852D0F2A0941842A0E* L_15;
-		L_15 = WebClient_GetUri_mCAB1537E6F29414B8E1079DE8B5D1A90EB4533BA(__this, L_14, NULL);
-		return L_15;
 	}
 }
 // System.Uri System.Net.WebClient::GetUri(System.Uri)
