@@ -24,11 +24,17 @@ const Il2CppMetadataRegistration g_MetadataRegistration =
 {
 	4933,
 	g_Il2CppGenericTypes,
-	3316,
+	3318,
 	g_Il2CppGenericInstTable,
+<<<<<<< HEAD
 	43055,
 	g_Il2CppGenericMethodFunctions,
 	17967,
+=======
+	43056,
+	g_Il2CppGenericMethodFunctions,
+	17965,
+>>>>>>> parent of 594b093 (Works - NO DOWNLOADS!)
 	g_Il2CppTypeTable,
 	50584,
 	g_Il2CppMethodSpecTable,

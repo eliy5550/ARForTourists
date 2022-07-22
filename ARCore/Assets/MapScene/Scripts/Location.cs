@@ -3,6 +3,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Android;
+using UnityEngine.Networking;
 
 [Serializable]
 public class ARLocation
@@ -128,7 +129,6 @@ public class Location : MonoBehaviour
             Permission.RequestUserPermission(Permission.FineLocation);
             Permission.RequestUserPermission(Permission.CoarseLocation);
         }
-
         StartCoroutine(GPSLoc());
 
     }

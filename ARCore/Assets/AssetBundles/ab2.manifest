@@ -1,9 +1,9 @@
 ManifestFileVersion: 0
-CRC: 2855047348
+CRC: 423837368
 Hashes:
   AssetFileHash:
     serializedVersion: 2
-    Hash: 1dc19e5ba08d97f8dcafe5503cc85ef7
+    Hash: e14a1e14a2e29a75c036735969cc2491
   TypeTreeHash:
     serializedVersion: 2
     Hash: e7457c507a643df8f549c2140e19235f
@@ -93,14 +93,12 @@ Assets:
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Meshes/Road.fbx
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
   Colliders)/Free Racing Car Red Variant.prefab
-- Assets/Resources/zip/Prefabs/NotToLoad/AR Default Point Cloud.prefab
-- Assets/Resources/zip/Prefabs/NotToLoad/AR Default Plane.prefab
-- Assets/Resources/zip/mats/mat2.mat
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
   Variations/AFRC_Tex_Col4.png
 - Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Animators/GamblerCatAnimator.controller
+- Assets/Resources/zip/mats/mat2.mat
 - Assets/Resources/zip/Prefabs/Resources_/RedX/placement_marker.png
-- Assets/Resources/zip/Prefabs/NotToLoad/LocationBG.prefab
+- Assets/Resources/zip/Prefabs/NotToLoad/AR Default Point Cloud.prefab
 - Assets/Resources/zip/Prefabs/A.prefab
 - Assets/Resources/zip/Audio/B.mp3
 - Assets/Resources/zip/Prefabs/B.prefab
@@ -118,12 +116,7 @@ Assets:
   Colliders)/Free Racing Car.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
   Only)/Free Racing Car.prefab
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Night/Night
-  Skybox.mat
 - Assets/Resources/zip/Prefabs/Resources_/RedX/RenderTexture.renderTexture
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Day/Day
-  Skybox.mat
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Night/Textures/Middle.png
 - Assets/Resources/zip/info.csv
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
   Variations/AFRC_Mat_Col2.mat
@@ -137,20 +130,19 @@ Assets:
   Colliders)/Free Racing Car Gray Variant.prefab
 - Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Animators/CatMan.controller
 - Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Materials/GamblerCatMat.mat
+- Assets/Resources/zip/Prefabs/NotToLoad/1METERCUBE.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
   Only)/Free Racing Car Red Variant.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/AFRC_Tex_Emission.png
-- Assets/Resources/zip/Prefabs/NotToLoad/RedCircle.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/AFRC_Env_Mat.png
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Day/Textures/Top.png
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
-  Only)/Free Racing Car Purple Variant.prefab
+- Assets/Resources/zip/Prefabs/NotToLoad/LocationBG.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
   Variations/AFRC_Tex_Col2.png
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
+  Only)/Free Racing Car Purple Variant.prefab
+- Assets/Resources/zip/Prefabs/NotToLoad/AR Default Plane.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
   Variations/AFRC_Mat_Col3.mat
-- Assets/Resources/zip/Prefabs/NotToLoad/1METERCUBE.prefab
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Night/Textures/Bottom.png
 - Assets/Resources/zip/mats/mat0.mat
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
   Only)/Free Racing Car Blue Variant.prefab
@@ -158,13 +150,11 @@ Assets:
   Variations/AFRC_Mat_Col4.mat
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
   Colliders)/Free Racing Car Purple Variant.prefab
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Night/Textures/Top.png
+- Assets/Resources/zip/Prefabs/Resources_/RedX/placement.mat
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
   Colliders)/Free Racing Car Blue Variant.prefab
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Day/Textures/Middle.png
-- Assets/Resources/zip/Prefabs/Resources_/RedX/placement.mat
 - Assets/Resources/zip/Prefabs/C.prefab
-- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Skybox/Day/Textures/Bottom.png
+- Assets/Resources/zip/Prefabs/NotToLoad/RedCircle.prefab
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
   Variations/AFRC_Tex_Col5.png
 - Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
