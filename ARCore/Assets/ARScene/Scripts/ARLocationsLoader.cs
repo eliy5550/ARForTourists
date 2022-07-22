@@ -20,13 +20,16 @@ public class ARLocationsLoader : MonoBehaviour
     }
     private void LoadFromResources()
     {
+
+        AssetBundle ab = AssetBundle.LoadFromFile(Application.persistentDataPath + "/ab");
+
         //LOAD ALL PREFABS
-        GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
+        GameObject[] allPrefabs = ab.LoadAllAssets<GameObject>();
         //LOAD ALL AUDIO
-        AudioClip[] allAudio = Resources.LoadAll<AudioClip>("zip/audio");
+        AudioClip[] allAudio = ab.LoadAllAssets<AudioClip>();
 
         //LOADING STRINGS
-        TextAsset df = Resources.Load<TextAsset>("zip/info");
+        TextAsset df = ab.LoadAsset<TextAsset>("info.csv");
         string dftext = df.text;
         string[] rows = dftext.Split('\n');
 
