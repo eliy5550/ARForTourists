@@ -1,0 +1,163 @@
+ManifestFileVersion: 0
+CRC: 423837368
+Hashes:
+  AssetFileHash:
+    serializedVersion: 2
+    Hash: e14a1e14a2e29a75c036735969cc2491
+  TypeTreeHash:
+    serializedVersion: 2
+    Hash: e7457c507a643df8f549c2140e19235f
+HashAppended: 0
+ClassTypes:
+- Class: 1
+  Script: {instanceID: 0}
+- Class: 4
+  Script: {instanceID: 0}
+- Class: 21
+  Script: {instanceID: 0}
+- Class: 23
+  Script: {instanceID: 0}
+- Class: 28
+  Script: {instanceID: 0}
+- Class: 33
+  Script: {instanceID: 0}
+- Class: 43
+  Script: {instanceID: 0}
+- Class: 48
+  Script: {instanceID: 0}
+- Class: 49
+  Script: {instanceID: 0}
+- Class: 54
+  Script: {instanceID: 0}
+- Class: 64
+  Script: {instanceID: 0}
+- Class: 65
+  Script: {instanceID: 0}
+- Class: 74
+  Script: {instanceID: 0}
+- Class: 83
+  Script: {instanceID: 0}
+- Class: 84
+  Script: {instanceID: 0}
+- Class: 90
+  Script: {instanceID: 0}
+- Class: 91
+  Script: {instanceID: 0}
+- Class: 95
+  Script: {instanceID: 0}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 5f66da7470dce8f4d821d71dd2b1d4ac, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 468ea6c98cd64494abbc2c2f34d6cde2, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 802867a6f80e8cd4dac5b926626cc11b, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: 3d180956a54db4646a1c6342921672ad, type: 3}
+- Class: 114
+  Script: {fileID: 11500000, guid: afcab4e7938ae724a8a59ecac3580761, type: 3}
+- Class: 115
+  Script: {instanceID: 0}
+- Class: 120
+  Script: {instanceID: 0}
+- Class: 128
+  Script: {instanceID: 0}
+- Class: 137
+  Script: {instanceID: 0}
+- Class: 146
+  Script: {instanceID: 0}
+- Class: 198
+  Script: {instanceID: 0}
+- Class: 199
+  Script: {instanceID: 0}
+- Class: 222
+  Script: {instanceID: 0}
+- Class: 224
+  Script: {instanceID: 0}
+SerializeReferenceClassIdentifiers:
+- AssemblyName: UnityEngine.CoreModule
+  ClassName: UnityEngine.Events.PersistentCallGroup
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.FontData
+- AssemblyName: UnityEngine.UI
+  ClassName: UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
+Assets:
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/AFRC_Emission.mat
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Animators/GamblerCatAnimator
+  1.controller
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Meshes/ARCADE
+  - FREE Racing Car.fbx
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Meshes/Road.fbx
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
+  Colliders)/Free Racing Car Red Variant.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
+  Variations/AFRC_Tex_Col4.png
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Animators/GamblerCatAnimator.controller
+- Assets/Resources/zip/mats/mat2.mat
+- Assets/Resources/zip/Prefabs/Resources_/RedX/placement_marker.png
+- Assets/Resources/zip/Prefabs/NotToLoad/AR Default Point Cloud.prefab
+- Assets/Resources/zip/Prefabs/A.prefab
+- Assets/Resources/zip/Audio/B.mp3
+- Assets/Resources/zip/Prefabs/B.prefab
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/FBX/GamblerCatNew.fbx
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/AFRC_Env_Mat.mat
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
+  Variations/AFRC_Tex_Col1.png
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Animators/JustIdle.controller
+- Assets/Resources/zip/Audio/A.mp3
+- Assets/Resources/zip/mats/mat1.mat
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
+  Variations/AFRC_Mat_Col1.mat
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Models/Blender/GamblerCat.blend
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
+  Colliders)/Free Racing Car.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
+  Only)/Free Racing Car.prefab
+- Assets/Resources/zip/Prefabs/Resources_/RedX/RenderTexture.renderTexture
+- Assets/Resources/zip/info.csv
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
+  Variations/AFRC_Mat_Col2.mat
+- Assets/Resources/zip/Audio/C.mp3
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
+  Variations/AFRC_Mat_Col5.mat
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
+  Variations/AFRC_Tex_Col3.png
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Models/FBX/GamblerCat.fbx
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
+  Colliders)/Free Racing Car Gray Variant.prefab
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Animators/CatMan.controller
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Materials/GamblerCatMat.mat
+- Assets/Resources/zip/Prefabs/NotToLoad/1METERCUBE.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
+  Only)/Free Racing Car Red Variant.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/AFRC_Tex_Emission.png
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/AFRC_Env_Mat.png
+- Assets/Resources/zip/Prefabs/NotToLoad/LocationBG.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
+  Variations/AFRC_Tex_Col2.png
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
+  Only)/Free Racing Car Purple Variant.prefab
+- Assets/Resources/zip/Prefabs/NotToLoad/AR Default Plane.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
+  Variations/AFRC_Mat_Col3.mat
+- Assets/Resources/zip/mats/mat0.mat
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
+  Only)/Free Racing Car Blue Variant.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Materials/Color
+  Variations/AFRC_Mat_Col4.mat
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
+  Colliders)/Free Racing Car Purple Variant.prefab
+- Assets/Resources/zip/Prefabs/Resources_/RedX/placement.mat
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (With
+  Colliders)/Free Racing Car Blue Variant.prefab
+- Assets/Resources/zip/Prefabs/C.prefab
+- Assets/Resources/zip/Prefabs/NotToLoad/RedCircle.prefab
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Textures/Color
+  Variations/AFRC_Tex_Col5.png
+- Assets/Resources/zip/Prefabs/Resources_/ARCADE - FREE Racing Car/Prefabs (Meshes
+  Only)/Free Racing Car Gray Variant.prefab
+- Assets/Resources/zip/Prefabs/Resources_/SiuniaevCharacters/01_GamblerCat/Textures/GamblerCat.png
+Dependencies: []
