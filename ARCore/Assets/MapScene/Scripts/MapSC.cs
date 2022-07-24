@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Android;
 using UnityEngine.UI;
 
@@ -77,5 +78,9 @@ public class MapSC : MonoBehaviour
 
         // Stops the location service if there is no need to query location updates continuously.
         Input.location.Stop();
+    }
+
+    public void OpenCamera() {
+        SceneManager.LoadScene("ARScene");
     }
 }

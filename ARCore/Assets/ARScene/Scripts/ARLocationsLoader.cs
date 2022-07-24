@@ -9,16 +9,20 @@ using System;
 public class ARLocationsLoader : MonoBehaviour
 {
 
-    public ARLocation[] aRLocations;
+    ARLocation[] aRLocations;
     public int size;
     bool unzipped;
     void Start()
     {
-        
 
-        LoadFromResources();
+
+        aRLocations = LoadFromResources();
+
+        Location location = FindObjectOfType<Location>();
+        location.arLocations = aRLocations;
+
     }
-    private void LoadFromResources()
+    public ARLocation[] LoadFromResources()
     {
         //LOAD ALL PREFABS
         GameObject[] allPrefabs = Resources.LoadAll<GameObject>("zip/prefabs");
@@ -90,8 +94,7 @@ public class ARLocationsLoader : MonoBehaviour
             }
         }
 
-        Location location = FindObjectOfType<Location>();
-        location.arLocations = aRLocations;
+        return aRLocations;
     }
 
     void Update()

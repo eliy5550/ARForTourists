@@ -58,6 +58,7 @@ public class PlaceOnPlane : MonoBehaviour
 
     public AudioClip clipForThisLocation;
     public string animationName = "arm_npc_1|A";
+    public string name = "?";
     Animator animator;
 
 
