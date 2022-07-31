@@ -182,14 +182,14 @@ public class PlaceOnPlane : MonoBehaviour
                 RemovePlaneIndicators();
                 explainButton.SetActive(true);
             }
-            else
-            {
-                //repositioning of the object
-                spawnedObject.transform.position = hitPose.position;
-                spawnedObject.transform.LookAt(cam.transform.position);
-                spawnedObject.transform.rotation = Quaternion.Euler(hitPose.rotation.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
-                RemovePlaneIndicators();
-            }
+            //else
+            //{
+            //    //repositioning of the object
+            //    spawnedObject.transform.position = hitPose.position;
+            //    spawnedObject.transform.LookAt(cam.transform.position);
+            //    spawnedObject.transform.rotation = Quaternion.Euler(hitPose.rotation.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
+            //    RemovePlaneIndicators();
+            //}
 
             Destroy(placeButton);
             Destroy(spawnedRedObject);
@@ -218,6 +218,7 @@ public class PlaceOnPlane : MonoBehaviour
     }
 
     IEnumerator RemoveExplainButtonForTime(float time) {
+        explainButton.SetActive(false);
         yield return new WaitForSeconds(time);
         explainButton.SetActive(true);
     }

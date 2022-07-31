@@ -236,7 +236,13 @@ extern void CharacterRotator_OnPointerUp_mF4E245C2F58C1151B92F1BC94ECBC61A6306AC
 extern void CharacterRotator_Rotate_m28278B053BB6447E8EE65D637B8676B75A93EB8D (void);
 // 0x00000070 System.Void CharacterRotator::.ctor()
 extern void CharacterRotator__ctor_mC257A19EF852DFA9BBC461DDCF53A1F128619E35 (void);
-static Il2CppMethodPointer s_methodPointers[112] = 
+// 0x00000071 System.Void testcat::Start()
+extern void testcat_Start_mF3D1361BB3523A9CDC1850B0FDE937BA9FE71800 (void);
+// 0x00000072 System.Void testcat::Update()
+extern void testcat_Update_m27601A9AAE0EC357361C7E898DD15F9D2E283458 (void);
+// 0x00000073 System.Void testcat::.ctor()
+extern void testcat__ctor_mCB732833A05DA4370817A648B05CABBED4A3FF4D (void);
+static Il2CppMethodPointer s_methodPointers[115] = 
 {
 	ARLocation__ctor_m3AD29CAD78082645C9E095327AA1AF14304216C1,
 	ARLocation__ctor_mA714E1D6B7E9FF275E87E6A263EEEC221585CC41,
@@ -350,8 +356,11 @@ static Il2CppMethodPointer s_methodPointers[112] =
 	CharacterRotator_OnPointerUp_mF4E245C2F58C1151B92F1BC94ECBC61A6306ACB8,
 	CharacterRotator_Rotate_m28278B053BB6447E8EE65D637B8676B75A93EB8D,
 	CharacterRotator__ctor_mC257A19EF852DFA9BBC461DDCF53A1F128619E35,
+	testcat_Start_mF3D1361BB3523A9CDC1850B0FDE937BA9FE71800,
+	testcat_Update_m27601A9AAE0EC357361C7E898DD15F9D2E283458,
+	testcat__ctor_mCB732833A05DA4370817A648B05CABBED4A3FF4D,
 };
-static const int32_t s_InvokerIndices[112] = 
+static const int32_t s_InvokerIndices[115] = 
 {
 	1462,
 	6498,
@@ -465,12 +474,15 @@ static const int32_t s_InvokerIndices[112] =
 	5190,
 	6498,
 	6498,
+	6498,
+	6498,
+	6498,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule;
 const Il2CppCodeGenModule g_AssemblyU2DCSharp_CodeGenModule = 
 {
 	"Assembly-CSharp.dll",
-	112,
+	115,
 	s_methodPointers,
 	0,
 	NULL,
