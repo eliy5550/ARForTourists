@@ -684,6 +684,8 @@ struct TypeDependencyAttribute_t5965D44DD3D45E079AC5E157FC6733DEEE248546;
 struct TypeForwardedFromAttribute_t6B57EB208E1AEA8F50797D6A33D691CDB60DA84E;
 // System.Runtime.Serialization.Formatters.Binary.TypeInformation
 struct TypeInformation_tDD3B3F023E4F59438075F37170536824C8D51324;
+// System.Runtime.InteropServices.TypeLibVersionAttribute
+struct TypeLibVersionAttribute_t1088DACCB72084A09EA432E16E63048A1170FD7B;
 // System.Runtime.Serialization.TypeLoadExceptionHolder
 struct TypeLoadExceptionHolder_tE04A243E128D031203ECF2A272C35B3BC51D47A2;
 // System.Text.UTF8Encoding
@@ -3696,6 +3698,15 @@ struct TypeForwardedFromAttribute_t6B57EB208E1AEA8F50797D6A33D691CDB60DA84E  : p
 {
 	// System.String System.Runtime.CompilerServices.TypeForwardedFromAttribute::<AssemblyFullName>k__BackingField
 	String_t* ___U3CAssemblyFullNameU3Ek__BackingField_0;
+};
+
+// System.Runtime.InteropServices.TypeLibVersionAttribute
+struct TypeLibVersionAttribute_t1088DACCB72084A09EA432E16E63048A1170FD7B  : public Attribute_tFDA8EFEFB0711976D22474794576DAF28F7440AA
+{
+	// System.Int32 System.Runtime.InteropServices.TypeLibVersionAttribute::_major
+	int32_t ____major_0;
+	// System.Int32 System.Runtime.InteropServices.TypeLibVersionAttribute::_minor
+	int32_t ____minor_1;
 };
 
 // System.UInt16
@@ -22061,6 +22072,26 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void FieldOffsetAttribute__ctor_m24E7664C59D2
 		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
 		int32_t L_0 = ___offset0;
 		__this->____val_0 = L_0;
+		return;
+	}
+}
+#ifdef __clang__
+#pragma clang diagnostic pop
+#endif
+#ifdef __clang__
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Winvalid-offsetof"
+#pragma clang diagnostic ignored "-Wunused-variable"
+#endif
+// System.Void System.Runtime.InteropServices.TypeLibVersionAttribute::.ctor(System.Int32,System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TypeLibVersionAttribute__ctor_mFA1EB7295AAA91F3F36152FF6D32A0AD7C9E06C3 (TypeLibVersionAttribute_t1088DACCB72084A09EA432E16E63048A1170FD7B* __this, int32_t ___major0, int32_t ___minor1, const RuntimeMethod* method) 
+{
+	{
+		Attribute__ctor_m79ED1BF1EE36D1E417BA89A0D9F91F8AAD8D19E2(__this, NULL);
+		int32_t L_0 = ___major0;
+		__this->____major_0 = L_0;
+		int32_t L_1 = ___minor1;
+		__this->____minor_1 = L_1;
 		return;
 	}
 }
