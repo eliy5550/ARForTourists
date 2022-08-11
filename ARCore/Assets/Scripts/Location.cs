@@ -87,14 +87,18 @@ public class Location : MonoBehaviour
             // If the connection succeeded, this retrieves the device's current location and displays it in the Console window.
             lat = Input.location.lastData.latitude;
             lon = Input.location.lastData.longitude;
+
             //print("LAT: " + lat + "\nLON: " + lon);
             locationtext.text = "LAT: " + lat + "\nLON: " + lon;
             ARLocation arloc = new ARLocation();
             ARLocation closestAR = arloc.closest(arLocations, (float)lon, (float)lat);
+
+            PlaceOnPlaneSC.hasLocation = true;
             SetModelForDisplaying(closestAR.arModel);
             SetName(closestAR.name);
             SetSoundForPlaying(closestAR.clip);
             SetAnimationNameForPlaying(closestAR.animationName);
+
             lookingForLocation = false;
         }
 

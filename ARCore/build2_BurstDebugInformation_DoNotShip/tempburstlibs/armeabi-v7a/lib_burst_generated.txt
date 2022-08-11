@@ -148,9 +148,9 @@ Library: lib_burst_generated
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\UnityEngine.XR.LegacyInputHelpers.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Unity.Burst.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Unity.TextMeshPro.dll
+--root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Unity.Timeline.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Unity.RenderPipeline.Universal.ShaderLibrary.dll
---root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Assembly-CSharp.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Unity.XR.Management.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\Unity.RenderPipelines.Core.ShaderLibrary.dll
 --root-assembly=D:\Unity_Projects\AR\ARForTourists\ARCore\Temp\StagingArea\Data\Managed\UnityEngine.SpatialTracking.dll
