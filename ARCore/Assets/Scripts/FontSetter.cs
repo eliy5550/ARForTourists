@@ -11,7 +11,6 @@ public class FontSetter : MonoBehaviour
     public TMP_FontAsset fontasset;
     void Start()
     {
-        Debug.Log("font setter");
         SetFontToAll(font);
     }
 

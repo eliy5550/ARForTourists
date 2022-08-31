@@ -1,13 +1,22 @@
 
+using System;
 using System.Drawing;
 using UnityEngine;
 
 public class RedDotDetector
 {
-    public static bool FindRedCircle(RenderTexture renderTexture , ref Vector2 redPoint) {
-        
 
+    public static bool FindRedCircle(Camera camera , ref Vector2 redPoint) {
+        Texture2D tex = new Texture2D(camera.pixelWidth, camera.pixelHeight, TextureFormat.RGB24, false);
+        RenderTexture rt = new RenderTexture(camera.pixelWidth, camera.pixelHeight, 24);
+        camera.targetTexture = rt;
+        camera.Render();
+        RenderTexture.active = rt;
 
+        Debug.Log(tex.GetPixel(0, 0));
+
+        camera.targetTexture = null;
+        RenderTexture.active = null; // added to avoid errors 
         return false;
     }
 

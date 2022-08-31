@@ -58,7 +58,7 @@ public class Location : MonoBehaviour
         Input.location.Start();
 
         // Waits until the location service initializes
-        int maxWait = 3;
+        int maxWait = 7;
         while (Input.location.status == LocationServiceStatus.Initializing && maxWait > 0)
         {
             yield return new WaitForSeconds(1);
@@ -89,7 +89,7 @@ public class Location : MonoBehaviour
             lon = Input.location.lastData.longitude;
 
             //print("LAT: " + lat + "\nLON: " + lon);
-            locationtext.text = "LAT: " + lat + "\nLON: " + lon;
+            locationtext.text = "LOCATION DETECTED";
             ARLocation arloc = new ARLocation();
             ARLocation closestAR = arloc.closest(arLocations, (float)lon, (float)lat);
 

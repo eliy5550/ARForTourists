@@ -62,7 +62,7 @@ public class PlaceOnPlane : MonoBehaviour
     //EVERY FRAME PLACE AN X ON THE GROUND
     private void Update()
     {
-        if (!clickedPlace && hasLocation) {
+        if (!clickedPlace) {
             PlaceXOnGround();
         }
         
@@ -70,15 +70,15 @@ public class PlaceOnPlane : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (RedDotDetector.FindRedCircle(cam.activeTexture ,ref redPos))
-        {
-            //RaycastInstantiation(pos);
-            GameObject.Find("reddotpos").GetComponent<Text>().text = "Found: " + redPos.ToString();
-        }
-        else { 
+        //if (RedDotDetector.FindRedCircle(cam ,ref redPos))
+        //{
+        //    //RaycastInstantiation(pos);
+        //    GameObject.Find("reddotpos").GetComponent<Text>().text = "Found: " + redPos.ToString();
+        //}
+        //else { 
             
-            GameObject.Find("reddotpos").GetComponent<Text>().text = "no red...";
-        }
+        //    GameObject.Find("reddotpos").GetComponent<Text>().text = "no red...";
+        //}
 
     }
 
@@ -104,7 +104,7 @@ public class PlaceOnPlane : MonoBehaviour
             {
                 //repositioning of the object
                 spawnedObject.transform.position = hitPose.position;
-                spawnedObject.transform.LookAt(cam.transform.position);
+                spawnedObject.transform.LookAt(GameObject.Find("AR Camera").transform.position);
                 spawnedObject.transform.rotation = Quaternion.Euler(hitPose.rotation.x, transform.rotation.eulerAngles.y, transform.rotation.eulerAngles.z);
                 RemovePlaneIndicators();
             }
@@ -127,7 +127,7 @@ public class PlaceOnPlane : MonoBehaviour
                 spawnedRedObject = Instantiate(redCircle, hitPose.position, hitPose.rotation);
                 spawnedRedObject.transform.LookAt(cam.transform.position);
                 spawnedRedObject.transform.rotation = Quaternion.Euler(hitPose.rotation.x, transform.rotation.eulerAngles.y, hitPose.rotation.z);
-                state.text = "PLACE THE X DIRECTLY ON THE RED CIRCLE ON THE GROUND.\nTHEN TAP 'PLACE'!";
+                state.text = "PUT THE X ON THE BLUE RECTANGLE.\nTHEN TAP 'PLACE'!";
                 if (spinner) { 
                     Destroy(spinner);
                 }
@@ -161,8 +161,7 @@ public class PlaceOnPlane : MonoBehaviour
                 Debug.Log("Spawning object!");
                 clickedPlace = true;
                 spawnedObject = Instantiate(m_PlacedPrefab, hitPose.position, hitPose.rotation);
-                spawnedObject.transform.LookAt(cam.transform.position);
-                spawnedObject.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.x, 0);
+                LookAtCamera();
                 RemovePlaneIndicators();
                 explainButton.SetActive(true);
             }
@@ -238,4 +237,25 @@ public class PlaceOnPlane : MonoBehaviour
         clickedPlace = false;
         explainButton.SetActive(false);
     }
+
+    //public void LookAtCamera() {
+
+    //    spawnedObject.transform.LookAt(Camera.main.transform.position);
+    //    spawnedObject.transform.rotation = Quaternion.Euler(0, transform.rotation.eulerAngles.x, 0);
+    //}
+    private void LookAtCamera()
+    {
+        Vector3 camForward = Camera.main.transform.forward;
+        Vector3 rotationForARModel = new Vector3(camForward.x, 0, camForward.z).normalized;
+
+        Debug.Log(rotationForARModel);
+
+        spawnedObject.transform.rotation = Quaternion.LookRotation(rotationForARModel);
+    }
+
+    public void BackToMap()
+    {
+        SceneManager.LoadScene("Map");
+    }
+
 }
