@@ -83,4 +83,9 @@ public class MapSC : MonoBehaviour
     public void OpenCamera() {
         SceneManager.LoadScene("ARScene");
     }
+    public void OpenTutotialLink()
+    {
+        Application.OpenURL("https://youtu.be/XpM92OnMw3w");
+    }
+    
 }
